@@ -1,0 +1,94 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 0; /* Eliminar relleno predeterminado */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    background-color: #3399ff; /* Color de fondo azul */
+    display: flex; /* Usar Flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Altura de la ventana del navegador */
+}
+
+/* Estilo del contenedor del formulario de inicio de sesión */
+.login-container {
+    width: 100%; /* Ancho completo en dispositivos móviles */
+    max-width: 400px; /* Ancho máximo del formulario */
+    padding: 20px; /* Relleno interno */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Centrar contenido de la caja de inicio de sesión */
+.login-box {
+    text-align: center;
+}
+
+/* Estilo del título del formulario */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los grupos de entrada */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block; /* Mostrar en bloque */
+    margin-bottom: 5px;
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Ancho dinámico para alineación */
+    padding: 10px; /* Relleno interno */
+    margin: 0 auto; /* Centrado horizontal */
+    display: block; /* Mostrar en bloque */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir borde y relleno en el ancho */
+}
+
+/* Estilo del botón de inicio de sesión */
+button {
+    width: 100%; /* Ancho completo del botón */
+    padding: 10px;
+    background-color: #3399ff; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Cambiar el color de fondo del botón al pasar el ratón */
+button:hover {
+    background-color: #2878cc; /* Azul más oscuro */
+}
+
+/* Estilo del enlace para recuperar contraseña */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #3399ff; /* Color azul del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Subrayar el enlace al pasar el ratón */
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%; /* Ancho adaptativo en móviles */
+        padding: 15px; /* Menos relleno para pantallas pequeñas */
+    }
+}

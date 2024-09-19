@@ -14,9 +14,25 @@
             text-align: center;
             margin-top: 20px;
         }
+
         #dedicatoria {
             text-align: center;
             margin-top: 100px;
+        }
+
+        /* Estilo personalizado para el botón con degradado */
+        .btn-custom {
+            background: linear-gradient(45deg, #ffdf00, #ffc107);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(45deg, #ffc107, #ffdf00);
         }
     </style>
 </head>
@@ -27,7 +43,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
                 <p class="h3">Hola, no creas que me olvidé de dártelo</p>
-                <button class="btn btn-primary btn-lg mt-3" onclick="showContent()">Ver sorpresa</button>
+                <button class="btn-custom btn-lg mt-3" onclick="showContent()">Ver sorpresa</button>
             </div>
         </div>
     </div>
@@ -62,8 +78,10 @@
             document.getElementById('dedicatoria').style.display = 'none';
             document.getElementById('flower-container').style.display = 'block';
 
-            // Reproducir la música
-            document.getElementById("musica1").play();
+            // Regular el volumen de la música al 60% y reproducirla
+            var audio = document.getElementById("musica1");
+            audio.volume = 0.6;
+            audio.play();
         }
     </script>
 

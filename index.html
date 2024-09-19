@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Dedicatoria</title>
     <style>
-        /* Estilos adicionales para ocultar contenido inicial */
         #flower-container {
             display: none;
             text-align: center;
@@ -18,19 +18,18 @@
             text-align: center;
             margin-top: 100px;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-        }
     </style>
 </head>
 
 <body>
     <!-- Mensaje de dedicatoria -->
-    <div id="dedicatoria">
-        <p>Hola, no creas que me olvidé de dártelo</p>
-        <button onclick="showContent()">Ver sorpresa</button>
+    <div id="dedicatoria" class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="h3">Hola, no creas que me olvidé de dártelo</p>
+                <button class="btn btn-primary btn-lg mt-3" onclick="showContent()">Ver sorpresa</button>
+            </div>
+        </div>
     </div>
 
     <!-- Contenedor de la flor y música, oculto al principio -->
@@ -67,6 +66,10 @@
             document.getElementById("musica1").play();
         }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+

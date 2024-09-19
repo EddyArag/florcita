@@ -5,49 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="style.css">
-    <title>Flower</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Dedicatoria</title>
+    <style>
+        /* Estilos adicionales para ocultar contenido inicial */
+        #flower-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #dedicatoria {
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body onclick="PLayAudio()">
 
-<div class="flower">
-    <div class="text-above">De tu Alexito </div>
-    <div class="mid">
+<body>
+    <!-- Mensaje de dedicatoria -->
+    <div id="dedicatoria">
+        <p>Hola, no creas que me olvidé de dártelo</p>
+        <button onclick="showContent()">Ver sorpresa</button>
     </div>
-    <div class="Petal1 p1">
+
+    <!-- Contenedor de la flor y música, oculto al principio -->
+    <div id="flower-container">
+        <div class="flower">
+            <div class="text-above">De tu Alexito</div>
+            <div class="mid"></div>
+            <div class="Petal1 p1"></div>
+            <div class="Petal1 p2"></div>
+            <div class="Petal1 p3"></div>
+            <div class="Petal1 p4"></div>
+            <div class="Petal2 p1"></div>
+            <div class="Petal2 p2"></div>
+            <div class="Petal2 p3"></div>
+            <div class="Petal2 p4"></div>
+            <div class="Petal3 p1"></div>
+            <div class="Petal3 p2"></div>
+            <div class="Petal3 p3"></div>
+            <div class="Petal3 p4"></div>
+            <div class="text-below">Para Mi Thunder</div>
+        </div>
+        <audio id="musica1" autoplay>
+            <source src="audio/flores.mp3" type="audio/mpeg">
+        </audio>
     </div>
-    <div class="Petal1 p2">
-    </div>
-    <div class="Petal1 p3">
-    </div>
-    <div class="Petal1 p4">
-    </div>
-    <div class="Petal2 p1">
-    </div>
-    <div class="Petal2 p2">
-    </div>
-    <div class="Petal2 p3">
-    </div>
-    <div class="Petal2 p4">
-    </div>
-    <div class="Petal3 p1">
-    </div>
-    <div class="Petal3 p2">
-    </div>
-    <div class="Petal3 p3">
-    </div>
-    <div class="Petal3 p4">
-    </div>
-    <div class="text-below">Para Mi Thunder</div>
-  </div>
-  <audio id="musica1" autoplay >
-    <source src="audio/flores.mp3"type="audio/mpeg">
-  </audio>  
-  <script>
-    function PLayAudio(){
-        document.getElementById("musica1").play();
-    }
-</script> 
+
+    <script>
+        function showContent() {
+            // Ocultar el mensaje de dedicatoria y mostrar la flor y música
+            document.getElementById('dedicatoria').style.display = 'none';
+            document.getElementById('flower-container').style.display = 'block';
+
+            // Reproducir la música
+            document.getElementById("musica1").play();
+        }
+    </script>
 </body>
+
 </html>
-<!-- Código: Daniel Arteaga de Faster Academy-->
